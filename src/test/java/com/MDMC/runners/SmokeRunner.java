@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		,glue="com/MDMC/steps"
 		,dryRun=false
 		,plugin= {"pretty"
-				,"html:target/html/cucumber-default-report"
+				,"html:target/MDMC/cucumber-default-report"
 				,"json:target/cucumber.json"
 				,"rerun:target/failed.txt"}
 		,monochrome=true

@@ -6,6 +6,7 @@ com\MDMC\runners\FailedRunner.class
 com\MDMC\steps\Hooks.class
 com\MDMC\steps\FindADoctorSteps.class
 com\MDMC\testbase\BaseClass.class
+com\MDMC\steps\findASpecialist.class
 com\MDMC\steps\HomePageSteps.class
 com\MDMC\utils\Constants.class
 com\MDMC\utils\ExcelUtility.class

@@ -12,8 +12,9 @@ public class Hooks extends CommonMethods {
 	public void start(Scenario scenario) throws InterruptedException {
 		System.out.println("Starting scenario "+scenario.getName());
 		setUp();
+		initializeAllPage();
 		driver.manage().window().maximize();
-		//Thread.sleep(4000);
+		Thread.sleep(1000);
 	}
 	
 	@After
@@ -23,7 +24,7 @@ public class Hooks extends CommonMethods {
 			byte[] picture=takeScreenshot("/failed/"+scenario.getName());
 			scenario.embed(picture, "image/png");
 		}else {
-			byte[] picture=takeScreenshot("/passeded/"+scenario.getName());
+			byte[] picture=takeScreenshot("/passed/"+scenario.getName());
 			scenario.embed(picture, "image/png");
 		}
 		

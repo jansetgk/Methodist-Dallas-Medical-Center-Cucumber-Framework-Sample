@@ -31,7 +31,7 @@ public class HomePageElements extends CommonMethods {
 	@FindBy(xpath="//nav[@id='TopNavigation']/ul/li[5]/a/span")
 	public WebElement patientsVisiters;
 	
-	@FindBy(xpath="//nav[@id='TopNavigation']/ul/li[6]/a/span")
+	@FindBy(xpath="//nav[@id='TopNavigation']/ul/li[7]/a/span")
 	public WebElement giving;
 	
 	@FindBy(xpath="//div[@id='HospitalHeaderArea']/div/div[2]/div[2]/span/icon")

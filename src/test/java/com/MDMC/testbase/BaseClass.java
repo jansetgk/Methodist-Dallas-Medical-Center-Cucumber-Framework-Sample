@@ -32,7 +32,7 @@ public static WebDriver driver;
 		}
 		driver.manage().timeouts().pageLoadTimeout(Constants.PAGE_LOAD_TIME, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_LOAD_TIME, TimeUnit.SECONDS);
-		// driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 
 		driver.get(ConfigsReader.getProperty("url"));
 	}

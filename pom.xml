@@ -76,7 +76,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>HrmsCucumberFramework</projectName>
+							<projectName>MethodistDallasMedicalCenter</projectName>
 							<!-- output directory for the generated report -->
 							<outputDirectory>${project.build.directory}</outputDirectory>
 							<!-- optional, defaults to outputDirectory if not specified -->

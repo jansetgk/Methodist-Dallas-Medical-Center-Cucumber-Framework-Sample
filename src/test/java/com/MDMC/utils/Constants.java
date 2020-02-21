@@ -19,7 +19,7 @@ public class Constants {
 	public static final String XL_DATA_FILEPATH = System.getProperty("user.dir")
 			+ "/src/test/resources/testdata/HrmsTestData.xlsx";
 	
-	public static final String REPORT_FILEPATH=System.getProperty("user.dir")+"/target/report/Hrms.html";
+	public static final String REPORT_FILEPATH=System.getProperty("user.dir")+"/target/report/MDMC.html";
 	
 	public static final String OS_NAME=System.getProperty("os.name");
 	

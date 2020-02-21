@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.MDMC.runners.SmokeRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.071 s <<< FAILURE! - in com.MDMC.runners.SmokeRunner
+com.MDMC.runners.SmokeRunner.initializationError  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.IllegalArgumentException: Not a file or directory: C:\Users\janyz\eclipse-workspace\MethodistDallasMedicalCenter\srs\test\resources\features
+

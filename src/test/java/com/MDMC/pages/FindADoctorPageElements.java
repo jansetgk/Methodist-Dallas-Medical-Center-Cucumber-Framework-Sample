@@ -29,9 +29,11 @@ public class FindADoctorPageElements {
 	@FindBy(xpath="//*[@id=\"PhysicianResults\"]/div[2]/article/div[1]/ul/li[2]/a/div[2]/span")
 	public WebElement physianResult;
 	
+	@FindBy (id="PhysicianResults_HDR0_PhysicianName")
+	public WebElement physicianName ;
 	
-	
-	
+	@FindBy (xpath="//div[@id='PhysicianBio']/div/div/div[2]/div/div/div[2]/strong")
+	public WebElement speakLanguage;
 	
 	public FindADoctorPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
