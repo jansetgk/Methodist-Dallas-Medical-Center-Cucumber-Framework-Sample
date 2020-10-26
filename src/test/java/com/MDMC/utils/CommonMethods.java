@@ -2,18 +2,22 @@ package com.MDMC.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -234,6 +238,109 @@ public class CommonMethods extends PageInitiliazer {
 		waitForClickability(element);
 		element.click();
 	}
+	
+	/**
+	 * This method will move the mouse to given element
+	 * 
+	 * @param target
+	 */
+	public static void moveTo(WebElement target) {
+		Actions action = new Actions(driver);
+		action.moveToElement(target);
+	}
+
+	/**
+	 * This element does an action click to given element
+	 * 
+	 * @param target
+	 */
+	public static void actionsClick(WebElement target) {
+		Actions action = new Actions(driver);
+		action.click(target);
+	}
+
+	/**
+	 * This method submits a form an waits the next page to be loaded
+	 * 
+	 * @param element
+	 */
+	public static void submit(WebElement element) {
+		element.submit();
+	}
+
+	public static String getTime() {
+		Date date = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+		String formattedDate = sdf.format(date.getTime());
+		return formattedDate;
+	}
+	
+	/**
+	 * This method select an option in drop down list by visible text
+	 * 
+	 * @param element
+	 * @param visibleText
+	 */
+	public static void selectByVisibleText(WebElement element, String visibleText) {
+		Select select = new Select(element);
+		select.selectByVisibleText(visibleText);
+	}
+
+	/**
+	 * This method select an option in drop down list by value attribute
+	 * 
+	 * @param element
+	 * @param value
+	 */
+	public static void selectByValue(WebElement element, String value) {
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+
+	/**
+	 * This method select an option in drop down list by index
+	 * 
+	 * @param element
+	 * @param index
+	 */
+	public static void selectByIndex(WebElement element, int index) {
+		Select select = new Select(element);
+		select.selectByIndex(index);
+	}
+	
+
+	/**
+	 * This methods selects date from the calendar 
+	 * @param element
+	 * @param year
+	 * @param month
+	 * @param day
+	 */
+
+	public void selectDate(WebElement element, String year, String month, String day) {
+		
+		element.clear();
+		element.click();
+
+		WebElement mnth = driver.findElement(By.xpath("location of month"));
+		Select mSelect = new Select(mnth);
+		mSelect.selectByVisibleText(month);
+		
+		WebElement years=driver.findElement(By.xpath("location of year"));
+		Select ySelect = new Select(years);
+		ySelect.selectByVisibleText(year);
+
+		List<WebElement> dayList = driver.findElements(By.xpath("location of days/th/td"));
+
+		for (WebElement dy : dayList) {
+			if (dy.getText().equals(day)) {
+				dy.click();
+				break;
+			}
+		}
+	}
+	
+	
 	/**
 	 * This method will select value from DD
 	 * 
@@ -277,6 +384,37 @@ public class CommonMethods extends PageInitiliazer {
 	}
 
 	/**
+	 * This method select an option in drop down list by value attribute
+	 * 
+	 * @param element
+	 * @param value
+	 */
+	public static void selectDDText(WebElement element, String value) {
+		Select select = new Select(element);
+		List<WebElement> options=select.getOptions();
+
+		boolean isFound=false;
+		
+		for(WebElement option:options) {
+			if(option.getText().equals(value)) {
+				select.selectByVisibleText(value);
+				isFound=true;
+				break;
+			}else if(option.getAttribute("value").contains(value)) {
+				select.selectByValue(value);
+				isFound=true;
+				break;
+			}
+		}
+		
+		if(!isFound) {
+			System.out.println(value+" is not found in the Dropdown List");
+		}
+
+	}
+	
+	
+	/**
 	 * This method will click on the radio based on the text
 	 * 
 	 * @param elements
@@ -290,9 +428,28 @@ public class CommonMethods extends PageInitiliazer {
 				el.click();
 				break;
 			}
-		}
+		}	
 	}
 
+	public static String jsonFile;
+	/**
+	 * This methods receives the filename of the jSon file and returns it in String format
+	 * @param fileName
+	 * @return
+	 */
+	     public static String readJson(String fileName) {
+	    	 try {
+	    		 
+	    		 jsonFile = new String(Files.readAllBytes(Paths.get(fileName)));
+	    		 
+	    	 } catch(IOException e) {
+	    		 
+	    		 e.printStackTrace();
+	    	 }
+	    	 return jsonFile;
+	    	 
+	     }    
+	     
 }
 	
 	

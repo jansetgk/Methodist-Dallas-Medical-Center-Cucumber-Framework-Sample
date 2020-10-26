@@ -29,21 +29,21 @@ public class FindADoctorSteps extends CommonMethods {
 	    List<Map<String,String>> mapfindD=findAdoctor.asMaps();
 	    for(Map<String,String>mapD:mapfindD) {
 		
-	    Select speciality=new Select(findD.speciality);
-		speciality.selectByVisibleText(mapD.get("SPECIALTY"));
+	    	Select speciality=new Select(findD.speciality);
+	    	speciality.selectByVisibleText(mapD.get("SPECIALTY"));
 		
-		Select location=new Select(findD.distance);
-		location.selectByVisibleText(mapD.get("LOCATION"));
+	    	Select location=new Select(findD.distance);
+	    	location.selectByVisibleText(mapD.get("LOCATION"));
 		
-		sendText(findD.zipCode, mapD.get("ZipCode"));
+	    	sendText(findD.zipCode, mapD.get("ZipCode"));
 		
-		Select languages=new Select(findD.language);
-		languages.selectByVisibleText(mapD.get("LANGUAGE"));
+	    	Select languages=new Select(findD.language);
+	    	languages.selectByVisibleText(mapD.get("LANGUAGE"));
 		
-		Select genders=new Select(findD.gender);
-		genders.selectByVisibleText(mapD.get("GENDER"));
+	    	Select genders=new Select(findD.gender);
+	    	genders.selectByVisibleText(mapD.get("GENDER"));
 		
-		Thread.sleep(1000);
+	    	Thread.sleep(1000);
 	    }	
 		
 	}

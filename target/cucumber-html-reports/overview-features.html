@@ -84,9 +84,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>MethodistDallasMedicalCenter</td>
+      <td>HrmsCucumberFramework</td>
         <td>1</td>
-      <td>12 Feb 2020, 09:54</td>
+      <td>09 Apr 2020, 12:46</td>
     </tr>
   </tbody>
 </table>
@@ -100,7 +100,7 @@ $(document).ready(function() {
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
     <h2>Error</h2>
-      <p>Something went wrong with project MethodistDallasMedicalCenter, build 1</p>
+      <p>Something went wrong with project HrmsCucumberFramework, build 1</p>
   </div>
 </div>
 
@@ -108,8 +108,9 @@ $(document).ready(function() {
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="message">
-        <pre>net.masterthought.cucumber.ValidationException: None report file was added!
-	at net.masterthought.cucumber.ReportParser.parseJsonFiles(ReportParser.java:62)
+        <pre>net.masterthought.cucumber.ValidationException: File 'C:\Users\janyz\eclipse-workspace\MethodistDallasMedicalCenter\target\test-classes\JSONFiles\createEmployee.json' is not proper Cucumber report!
+	at net.masterthought.cucumber.ReportParser.parseForFeature(ReportParser.java:101)
+	at net.masterthought.cucumber.ReportParser.parseJsonFiles(ReportParser.java:73)
 	at net.masterthought.cucumber.ReportBuilder.generateReports(ReportBuilder.java:88)
 	at net.masterthought.cucumber.CucumberReportGeneratorMojo.execute(CucumberReportGeneratorMojo.java:209)
 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
@@ -134,11 +135,27 @@ $(document).ready(function() {
 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `net.masterthought.cucumber.json.Feature[]` out of START_OBJECT token
+ at [Source: (InputStreamReader); line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1343)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1139)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1093)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.handleNonArray(ObjectArrayDeserializer.java:330)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:175)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3050)
+	at net.masterthought.cucumber.ReportParser.parseForFeature(ReportParser.java:95)
+	... 25 more
 </pre>
       </div>
       <div>Trying to generate report from following files. Make sure they are valid cucumber report files:</div>
       <div class="error-files">
         <pre>
+ C:\Users\janyz\eclipse-workspace\MethodistDallasMedicalCenter\target\test-classes\JSONFiles\createEmployee.json
+ C:\Users\janyz\eclipse-workspace\MethodistDallasMedicalCenter\target\test-classes\JSONFiles\generateToken.json
+ C:\Users\janyz\eclipse-workspace\MethodistDallasMedicalCenter\target\test-classes\JSONFiles\updateEmployee.json
         </pre>
       </div>
     </div>
