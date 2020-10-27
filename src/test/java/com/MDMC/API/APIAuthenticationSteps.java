@@ -9,20 +9,20 @@ import com.MDMC.utils.CommonMethods;
 public class APIAuthenticationSteps {
 
 	private Response response;
-	public static String Token;
+	public static String SeasionID;
 	private static RequestSpecification request;
 	
-	String generateTokenURI = "http://18.232.148.34/syntaxapi/api/generateToken.php";
+	String generateSeasionIdURI = "http://localhost:8081/rest/auth/1/session";
 	
-	@Given("user generates token")
-	public void user_generates_token() {
+	@Given("user generates seasion ID")
+	public void user_generates_seasion_ID() {
 		
 		request=given().header("Content-Type", "application/json");
 		
-		response = request.body(CommonMethods.readJson(APIConstants.GENERATE_TOKEN_JSON)).when().post(generateTokenURI);
+		response = request.body(CommonMethods.readJson(APIConstants.GENERATE_SEASIONID_JSON)).when().post(generateSeasionIdURI);
 		
-		Token = "Bearer " + response.jsonPath().getString("token");
+		SeasionID = "JSESSIONID=" + response.jsonPath().getString("session.value");
 
-		
+		System.out.println(SeasionID);
 	}
 }
