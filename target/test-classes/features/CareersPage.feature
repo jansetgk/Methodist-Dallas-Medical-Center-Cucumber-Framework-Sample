@@ -1,4 +1,4 @@
-
+@regression
 @tag
 Feature: Career page
   I want to use this template for my feature file

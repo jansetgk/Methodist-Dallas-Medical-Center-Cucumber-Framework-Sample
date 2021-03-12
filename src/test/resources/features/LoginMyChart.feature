@@ -1,4 +1,4 @@
-
+@regression
 @tag
 Feature: LoginMyChart
 
