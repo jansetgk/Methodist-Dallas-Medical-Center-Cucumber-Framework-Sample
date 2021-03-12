@@ -1,6 +1,5 @@
 #Author: janyz3940@gmail.com
-@regression
-@smoke
+
 Feature: Find a doctor
 
   Background: 

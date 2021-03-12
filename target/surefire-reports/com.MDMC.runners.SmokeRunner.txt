@@ -1,47 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: com.MDMC.runners.SmokeRunner
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 24.104 s <<< FAILURE! - in com.MDMC.runners.SmokeRunner
-Find a doctor.Find a doctor with given properties  Time elapsed: 8.436 s  <<< ERROR!
-org.openqa.selenium.NoSuchWindowException: 
-no such window: target window already closed
-from unknown error: web view not found
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 24.605 s <<< FAILURE! - in com.MDMC.runners.SmokeRunner
+Find a doctor.Find a doctor with given properties  Time elapsed: 11.719 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <span class="btn v1">...</span> is not clickable at point (583, 39). Other element would receive the click: <a class="alert" href="https://www.methodisthealthsystem.org/covid-19/" target="_blank">...</a>
   (Session info: chrome=89.0.4389.82)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: '1183-PC', ip: '100.127.255.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+System info: host: '1183-PC', ip: '100.127.255.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\janset.gok\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:64437}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9b8ab4d95c1c67c27a71fe7620aa4113
-*** Element info: {Using=id, value=PhysicianResults_HDR0_Gender}
-
-Find a doctor.Find a doctor with given properties  Time elapsed: 8.439 s  <<< ERROR!
-org.openqa.selenium.NoSuchWindowException: 
-no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=89.0.4389.82)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: '1183-PC', ip: '100.127.255.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\janset.gok\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:64437}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9b8ab4d95c1c67c27a71fe7620aa4113
-
-HomePage.clickAboutOurFacility  Time elapsed: 15.156 s  <<< ERROR!
-org.openqa.selenium.NoSuchWindowException: 
-no such window: window was already closed
-  (Session info: chrome=89.0.4389.82)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: '1183-PC', ip: '100.127.255.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\janset.gok\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:64511}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1a0586abdbfef49a34a538be83f4681e
-
-HomePage.clickAboutOurFacility  Time elapsed: 15.157 s  <<< ERROR!
-org.openqa.selenium.WebDriverException: 
-chrome not reachable
-  (Session info: chrome=89.0.4389.82)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: '1183-PC', ip: '100.127.255.202', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\janset.gok\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:64511}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1a0586abdbfef49a34a538be83f4681e
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\janset.gok\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:64395}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 535ecae108652d5171b5c2954b8d8331
 

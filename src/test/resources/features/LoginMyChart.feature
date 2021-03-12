@@ -1,3 +1,4 @@
+@smoke
 @regression
 @tag
 Feature: LoginMyChart
