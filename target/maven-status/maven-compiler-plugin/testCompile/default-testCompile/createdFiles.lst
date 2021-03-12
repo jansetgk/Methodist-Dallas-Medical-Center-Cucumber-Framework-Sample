@@ -1,7 +1,6 @@
 com\MDMC\pages\FindADoctorPageElements.class
 com\MDMC\runners\RegressionRunner.class
 com\MDMC\runners\SmokeRunner.class
-com\MDMC\API\APIAuthenticationSteps.class
 com\MDMC\pages\HomePageElements.class
 com\MDMC\runners\FailedRunner.class
 com\MDMC\steps\Hooks.class
@@ -21,5 +20,4 @@ com\MDMC\steps\FindADoctorSteps.class
 com\MDMC\runners\APIRunner.class
 com\MDMC\testbase\PageInitiliazer.class
 com\MDMC\utils\CommonMethods.class
-com\MDMC\API\CreatBugOnJiraAPI.class
 com\MDMC\steps\MyChartSteps.class

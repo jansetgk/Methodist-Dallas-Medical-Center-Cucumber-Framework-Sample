@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="srs/test/resources/features"
+		features="src/test/resources/features"
 		,glue="com/MDMC/steps"
 		,dryRun=false
 		,plugin= {"pretty"
