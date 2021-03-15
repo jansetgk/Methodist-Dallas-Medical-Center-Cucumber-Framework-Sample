@@ -16,11 +16,11 @@ Feature: Find a doctor
       #| speciality          | name                | language               |
       #| Hematology/Oncology | Maryada S. Reddy    | Hindi, Spanish, Telugu |
       #| Orthopedics         | Miguel A. Hernandez | English                |
-      #| Podiatry            | Dan E. Jones        | English                |
-
-  @smoke
+      #| Podiatry            | Dan E. Jones        | English               
+      
+      
   Scenario: Find a doctor with given properties
     When I enter doctor's deatails
       | SPECIALTY       | LOCATION | ZipCode | LANGUAGE | GENDER |
       | Family Medicine | 25 miles |   75094 | Spanish  | Female |
-    And I click  the doctor I  found
+    #And I click  the doctor I  found

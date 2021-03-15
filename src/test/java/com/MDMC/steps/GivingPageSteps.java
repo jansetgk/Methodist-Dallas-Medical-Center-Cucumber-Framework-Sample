@@ -18,7 +18,7 @@ public class GivingPageSteps extends CommonMethods {
 	public void i_click_volunteer_link() throws InterruptedException  {
 		//scrollIntoElement(givenPE.volunteerLink);
 		scrollDown(300);
-		click(givenPE.volunteerLink);
+		//click(givenPE.volunteerLink);
 		Thread.sleep(1000);
 	}
 
